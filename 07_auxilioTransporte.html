@@ -12,11 +12,38 @@
     */
 
     //ENTRADA
+    const salario = Number(prompt("Quanto você recebe mensalmente? "))
+    const auxilio = prompt("Deseja receber auxilio transporte? (S)-sim ou (N)-não ").toUpperCase()
+    const veiculo = prompt("Você tem veículo proprio?(S)-sim ou (N)-não ")
 
 
     //PROCESSAMENTO
+    let desconto = 0
+    let aumento = 0
+    let mensagem = ""
 
+    if (auxilio == "S" || veiculo == "S"){
+        desconto = salario * 0.06
+    }
+    if(veiculo == "S"){
+        aumento = 200
+    }
+    else if (auxilio == "S" && veiculo == "N"){
+        aumento = 150
+    }
+
+    const salarioFinal = (salario - desconto) + aumento
+
+    if(desconto > 0){
+        mensagem = "o desconto foi de R$" + desconto.toFixed(2) + " E o seu salario final foi de R$" + salarioFinal.toFixed(2)
+    }
+    else{
+        mensagem = "O seu salario final foi de R$" + salarioFinal.toFixed(2)
+    }
     
     //SAÍDA
+
+
+    document.write(mensagem)
 
 </script>
