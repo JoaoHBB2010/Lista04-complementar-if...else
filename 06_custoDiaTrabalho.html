@@ -21,23 +21,23 @@
     //PROCESSAMENTO
     const salario = viagens * 100
     let adicional = 0
-    
-    if (viagens <= 10 && cargo == "Motorista"){
-        adicional = salario * 0.20 
+
+    if (viagens <= 10 && cargo == "Motorista") {
+        adicional = salario * 0.20
     }
-    else if (viagens > 10 && cargo == "Motorista"){
-        adicional = salario * 0.35 
+    else if (viagens > 10 && cargo == "Motorista") {
+        adicional = salario * 0.35
     }
-    else if (viagens <= 10 && cargo == "Cobrador"){
-        adicional = 0 
+    else if (viagens <= 10 && cargo == "Cobrador") {
+        adicional = 0
     }
-    else if (viagens > 10 && cargo == "Cobrador"){
-        adicional = salario * 0.10 
+    else if (viagens > 10 && cargo == "Cobrador") {
+        adicional = salario * 0.10
     }
 
     const valorFinal = salario + adicional
 
-    
+
     //SAÍDA
     document.write("Seu cargo é " + cargo + " e seu salario final foi de R$" + valorFinal.toFixed(2))
 

@@ -20,22 +20,22 @@
     //PROCESSAMENTO
     let aumento = 0
 
-    if(salario <= 2000){
+    if (salario <= 2000) {
         aumento = salario * 0.15
     }
-    else if(salario <= 4000){
+    else if (salario <= 4000) {
         aumento = salario * 0.10
     }
-    else if(salario > 4000){
+    else if (salario > 4000) {
         aumento = salario * (0.07 + 0.005)
     }
-    else if(salario >= 7000){
+    else if (salario >= 7000) {
         aumento = salario * 0.05
     }
 
     const salarioFinal = salario + aumento
 
-    
+
     //SAÍDA
     document.write("O seu aumento foi de R$" + aumento.toFixed(2) + " e o seu salario final ficou em R$" + salarioFinal.toFixed(2))
 

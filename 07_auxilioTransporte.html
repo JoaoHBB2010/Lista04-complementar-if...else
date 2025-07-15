@@ -22,25 +22,25 @@
     let aumento = 0
     let mensagem = ""
 
-    if (auxilio == "S" || veiculo == "S"){
+    if (auxilio == "S" || veiculo == "S") {
         desconto = salario * 0.06
     }
-    if(veiculo == "S"){
+    if (veiculo == "S") {
         aumento = 200
     }
-    else if (auxilio == "S" && veiculo == "N"){
+    else if (auxilio == "S" && veiculo == "N") {
         aumento = 150
     }
 
     const salarioFinal = (salario - desconto) + aumento
 
-    if(desconto > 0){
+    if (desconto > 0) {
         mensagem = "o desconto foi de R$" + desconto.toFixed(2) + " E o seu salario final foi de R$" + salarioFinal.toFixed(2)
     }
-    else{
+    else {
         mensagem = "O seu salario final foi de R$" + salarioFinal.toFixed(2)
     }
-    
+
     //SAÍDA
 
 

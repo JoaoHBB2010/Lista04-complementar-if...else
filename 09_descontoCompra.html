@@ -17,23 +17,23 @@
 
 
     //PROCESSAMENTO
-    desconto = 0 
+    desconto = 0
 
-    if(cliente == "B"){
+    if (cliente == "B") {
         desconto = valor * 0.03
     }
-    else if(cliente == "D"){
+    else if (cliente == "D") {
         desconto = valor * 0.05
     }
-    else if(cliente == "P"){
+    else if (cliente == "P") {
         desconto = valor * 0.10
     }
-    else{
+    else {
         alert("DADOS INVALIDOS")
     }
- 
+
     const preco = valor - desconto
-    
+
     //SAÍDA
 
     document.write("O preço final foi de R$" + preco.toFixed(2))
